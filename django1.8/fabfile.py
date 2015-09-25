@@ -33,10 +33,12 @@ except ImportError:
 # Config setup #
 ################
 
+PROJ_APP = "cowhite_without_mezzanine"
+
 if has_mezzanine:
-    env.proj_app = real_project_name("cowhite_without_mezzanine")
+    env.proj_app = real_project_name(PROJ_APP)
 else:
-    env.proj_app = "cowhite_without_mezzanine"
+    env.proj_app = PROJ_APP
 
 conf = {}
 if sys.argv[0].split(os.sep)[-1] in ("fab", "fab-script.py"):
